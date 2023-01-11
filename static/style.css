@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #333;
+	line-height: 1.6;
+}
+
+.container {
+	background-color: white;
+	max-width: 550px;
+	margin: 2.5rem auto;
+	border: None;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px 0px;
+	overflow: auto;
+	padding: 1rem 3rem;
+}
+
+h1 {
+	color: #777;
+	margin-top: 15px;
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+img {
+	width: 110%;
+	margin-top: 1rem;
+}
+
+.message {
+	text-align: center;
+	padding: 5px;
+	border: #ccc dotted 2px;
+	margin-top: 2rem;
+}
+
+.logo {
+	width: 250px;
+	display: block;
+	margin: auto;
+}
+
+.form-group {
+	margin: 1rem 0;
+}
+
+input[type='text'],
+textarea {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius:5px;
+}
+select{
+	background-color: white;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	font-size: 1.15rem;
+}
+input[type='text']:focus,
+textarea:focus {	
+	border-radius: 5px;
+	outline: None;
+}
+.ratingbuttons{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3px 20px;
+}
+
+.rate, .active1{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid rgb(251, 181, 3);
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	padding: 10px 10px;
+	margin: 2px 2px;
+}
+.active, .rate:hover{
+	color: black;
+	background-color: rgb(243, 194, 70);
+	transition: 1s;
+}
+
+.btn {
+	display: block;
+	width: 30%;
+	background-color: white;
+	color: rgb(97, 71, 5);
+	padding: 15px 20px;
+	border: 1.4px solid rgb(251, 181, 3);
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+	margin: auto;
+	font-weight: 500;
+}
+.btn:hover{
+	background: rgb(248, 194, 57);
+	color: black;
+}
