@@ -16,17 +16,17 @@
       {% endif %} 
       <form action="/submit" method="POST">
           <h3>How likely would you recommend our service to your friend/relative? </h3>
-          <div class = "form-group" id = 'rateID'>
-            <input type="button"  name="rating" class = "rate" value="1" /> 
-            <input type="button" class = "rate" name="rating" value="2" /> 
-            <input type="button" class = "rate" name="rating" value="3" /> 
-            <input type="button" class = "rate" name="rating" value="4" /> 
-            <input type="button" class = "rate" name="rating" value="5" /> 
-            <input type="button" class = "rate" name="rating" value="6" /> 
-            <input type="button" class = "rate" name="rating" value="7" /> 
-            <input type="button" class = "rate" name="rating" value="8" /> 
-            <input type="button" class = "rate" name="rating" value="9" /> 
-            <input type="button" class = "rate" name="rating" value="10" checked /> 
+          <div class = "form-group ratingbuttons" id = 'rateID'>
+            <input type="radio"  name="rating" class = "rate" value="1" />1 
+            <input type="radio" class = "rate" name="rating" value="2" />2
+            <input type="radio" class = "rate" name="rating" value="3" />3 
+            <input type="radio" class = "rate" name="rating" value="4" />4 
+            <input type="radio" class = "rate" name="rating" value="5" />5 
+            <input type="radio" class = "rate" name="rating" value="6" />6 
+            <input type="radio" class = "rate" name="rating" value="7" />7 
+            <input type="radio" class = "rate" name="rating" value="8" />8 
+            <input type="radio" class = "rate" name="rating" value="9" />9 
+            <input type="radio" class = "rate" name="rating" value="10" checked />10
           </div>
         <script>
           var header = document.getElementById("rateID");

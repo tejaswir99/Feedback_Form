@@ -38,8 +38,8 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
-        request.form = dict(request.form)
-        request.form['rating'] = 10
+        '''request.form = dict(request.form)
+        request.form['rating'] = 10'''
         customer = request.form['customer']
         dealer = request.form['dealer']
         rating = request.form['rating']
