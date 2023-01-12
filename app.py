@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from send_mail import send_mail
+# from flask_migrate import Migrate
 
 app = Flask(__name__)
 
@@ -23,12 +24,14 @@ class Feedback(db.Model):
     dealer = db.Column(db.String(200))
     rating = db.Column(db.Integer)
     comments = db.Column(db.Text())
+    email = db.Column(db.String(200))
 
-    def __init__(self, customer, dealer, rating, comments):
+    def __init__(self, customer, dealer, rating, comments, email):
         self.customer = customer
         self.dealer = dealer
         self.rating = rating
         self.comments = comments
+        self.email = email
 
 
 @app.route('/')
@@ -44,14 +47,16 @@ def submit():
         dealer = request.form['dealer']
         rating = request.form['rating']
         comments = request.form['comments']
+        email = request.form['email']
         # print(customer, dealer, rating, comments)
         if customer == '' or dealer == '':
             return render_template('index.html', message='Please enter required fields')
-        if db.session.query(Feedback).filter(Feedback.customer == customer).count() == 0:
-            data = Feedback(customer, dealer, rating, comments)
+        if db.session.query(Feedback).filter(Feedback.email == email).count() == 0:
+            db.session
+            data = Feedback(customer, dealer, rating, comments, email)
             db.session.add(data)
             db.session.commit()
-            send_mail(customer, dealer, rating, comments)
+            send_mail(customer, dealer, rating, comments, email)
             return render_template('success.html')       
         return render_template('success.html')
 

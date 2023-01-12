@@ -10,6 +10,7 @@ psycopg2-binary = "*"
 flask-sqlalchemy = "*"
 gunicorn = "*"
 send-mail = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
