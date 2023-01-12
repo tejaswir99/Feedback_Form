@@ -58,7 +58,7 @@ def submit():
             db.session.commit()
             send_mail(customer, dealer, rating, comments, email)
             return render_template('success.html')       
-        return render_template('success.html')
+        return render_template('index.html', message = "Your feedback is already received.")
 
 if __name__ == '__main__':
     app.run()

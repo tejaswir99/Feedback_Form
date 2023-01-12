@@ -53,7 +53,7 @@ img {
 	margin: 1rem 0;
 }
 
-input[type='text'],
+input[type='text'],input[type = 'email'],
 textarea {
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	display: block;
@@ -71,7 +71,7 @@ select{
 	padding: 0.4rem;
 	font-size: 1.15rem;
 }
-input[type='text']:focus,
+input[type='text']:focus, input[type = 'email']:focus,
 textarea:focus {	
 	border-radius: 5px;
 	outline: None;
